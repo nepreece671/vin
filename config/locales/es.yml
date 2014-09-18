@@ -47,14 +47,14 @@ es:
     template:
       body:        "Hay problemas con los siguientes campos:"
       header:
-        one:       "1 error ha impedido que este %{model} se guarde"
+        one:       "Un error ha impedido que este %{model} se guarde"
         other:     "%{count} errores han impedido que este %{model} se guarde"
 #END:errors
 
 #START:layout
   layouts:
     application:
-      title:       "Publicaciones de Pragmatic"
+      title:       "CD & Vinyl"
       home:        "Inicio"
       questions:   "Preguntas"
       news:        "Noticias"
@@ -72,7 +72,7 @@ es:
 #START:main
   store:
     index:
-      title_html:  "Su Cat&aacute;logo de Pragmatic"
+      title_html:  "Nos Cat&aacute;logo"
       add_html:    "A&ntilde;adir al Carrito"
 #END:main
 

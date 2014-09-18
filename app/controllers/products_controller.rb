@@ -1,18 +1,15 @@
-#---
-# Excerpted from "Agile Web Development with Rails",
-# published by The Pragmatic Bookshelf.
-# Copyrights apply to this code. It may not be used to create training material, 
-# courses, books, articles, and the like. Contact us if you are in doubt.
-# We make no guarantees that this code is fit for any purpose. 
-# Visit http://www.pragmaticprogrammer.com/titles/rails4 for more book information.
+# /apps/controllers/products_controller
+# Based on http://www.pragmaticprogrammer.com/titles/rails4 for information.
 #---
 class ProductsController < ApplicationController
+  helper_method :sort_column, :sort_direction
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    @products = Product.order(sort_column + " " + sort_direction)
 
     respond_to do |format|
+      format.mobile # index.mobile.erb
       format.html # index.html.erb
       format.xml
       format.json { render :json=> @products }
@@ -104,4 +101,13 @@ class ProductsController < ApplicationController
       format.json { render :json=> @product.to_json(include :orders) }
     end
   end
+      
+    private
+    def sort_column
+      Product.column_names.include?(params[:sort]) ? params[:sort] : "artist"
+    end
+    
+    def sort_direction
+      %w[asc desc].include?(params[:sort]) ? params[:direction] : "asc"
+    end
 end

@@ -1,0 +1,15 @@
+--- 
+javascripts: 
+- base: 
+  - application
+stylesheets: 
+  - base:
+  - application.css.scss
+  - carts.css.scss
+  - line_items.css.scss
+  - orders.css.scss
+  - products.css.scss
+  - scaffolds.css.scss
+  - sessions.css.scss
+  - store.css.scss
+  - users.css.scss

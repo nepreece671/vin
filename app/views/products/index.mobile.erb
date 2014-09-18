@@ -1,0 +1,10 @@
+<% title "Products" %>  
+<ul>  
+  <% for product in @products %>  
+  <li class="arrow">  
+    <%= link_to h(product.name), product %>  
+    <small class="counter"><%= product.typo %></small>  
+  </li>  
+  <% end %>  
+</ul>  
+<ul><li class="arrow"><%= link_to "New Product", new_product_path %></li></ul>  

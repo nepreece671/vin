@@ -13,10 +13,10 @@ class StoreApp
     x.declare! :DOCTYPE, :html
     x.html do
       x.head do
-        x.title 'Pragmatic Bookshelf'
+        x.title 'CD & Vinyl'
       end
       x.body do
-        x.h1 'Pragmatic Bookshelf'
+        x.h1 'CD & Vinyl'
  
         Product.all.each do |product|
           x.h2 product.title

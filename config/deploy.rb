@@ -8,8 +8,8 @@
 #---
 # be sure to change these
 set :user, 'rubys'
-set :domain, 'depot.pragprog.com'
-set :application, 'depot'
+set :domain, 'cd.vinylla.com'
+set :application, 'vinylla'
 
 # adjust if you are using RVM, remove if you are not
 $:.unshift(File.expand_path('./lib', ENV['rvm_path']))
